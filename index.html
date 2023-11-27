@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TailwindCSS Dark Theme</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body class="dark:bg-gray-800">
+    <h1
+      class="my-10 text-center tw-gray-500 text-5xl font-semibold dark:text-white"
+    >
+      Enjoy Dark Theme with TailwindCSS
+    </h1>
+
+    <div class="flex justify-center items-center mt-4">
+      <div class="w-1/2">
+        <div class="bg-white dark:bg-black/90 shadow-md rounded-md p-4">
+          <h2 class="text-2xl font-bold text-gray-800 dark:text-white">
+            Dark Theme
+          </h2>
+          <p class="text-gray-700 dark:text-gray-300 mt-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            voluptate, quibusdam, quia, voluptatum quod voluptas quos
+            reprehenderit quas voluptatibus quidem dolorum. Quisquam voluptate,
+            quibusdam, quia, voluptatum quod voluptas quos reprehenderit quas
+            voluptatibus quidem dolorum.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5 flex items-center justify-center">
+      <button
+        title="Toggle Theme"
+        onclick="changeTheme()"
+        class="w-12 h-6 rounded-full p-1 bg-gray-400 dark:bg-gray-600 relative transition-colors duration-500 ease-in focus:outline-none focus:ring-2 focus:ring-blue-700 dark:focus:ring-blue-600 focus:border-transparent"
+      >
+        <div
+          id="toggle"
+          class="rounded-full w-4 h-4 bg-blue-600 dark:bg-blue-500 relative ml-0 dark:ml-6 pointer-events-none transition-all duration-300 ease-out"
+        ></div>
+      </button>
+      <span class="px-4 dark:text-white"> Toggle Dark Theme </span>
+    </div>
+
+    <script>
+      function changeTheme(event) {
+        document.documentElement.classList.toggle("dark");
+      }
+    </script>
+  </body>
+</html>
